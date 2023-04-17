@@ -28,7 +28,7 @@ app.use("https://budget-tracker-backend.onrender.com/api/v1/users", usersRoute);
 app.use("https://budget-tracker-backend.onrender.com/api/v1/accounts", accountsRoute);
 
 //---  Transaction Route  ---
-app.use("/api/v1/transactions", transactionsRoute);
+app.use("https://budget-tracker-backend.onrender.com/api/v1/transactions", transactionsRoute);
 
 //---------------------------------------
 // ERROR HANDLERS
