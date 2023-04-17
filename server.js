@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 require("./config/dbConnect");
 const usersRoute = require("./routes/users/usersRoute");
 const accountsRoute = require("./routes/accounts/accountsRoute");
@@ -7,6 +8,7 @@ const globalErrHandler = require("./middlewares/globalErrHandler");
 const cors = require("cors");
 
 const app = express();
+const BASE_URL = process.env.BASE_URL;
 
 //---------------------------------------
 // MIDDLEWARES
@@ -22,13 +24,13 @@ app.use(cors());
 
 //---  Users route  ---
 // app.use(path, Route)
-app.use("/api/v1/users", usersRoute);
+app.use(`${BASE_URL}/api/v1/users`, usersRoute);
 
 //---  Accounts route ---
-app.use("/api/v1/accounts", accountsRoute);
+app.use(`${BASE_URL}/api/v1/accounts`, accountsRoute);
 
 //---  Transaction Route  ---
-app.use("/api/v1/transactions", transactionsRoute);
+app.use(`${BASE_URL}/api/v1/transactions`, transactionsRoute);
 
 //---------------------------------------
 // ERROR HANDLERS
