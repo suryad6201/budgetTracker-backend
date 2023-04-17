@@ -1,10 +1,11 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 
 //CONNECT
 const dbConnect = async () => {
+  const MONGO_URI = process.env.MONGO_URI;
   try {
-    const URI =
-      "mongodb+srv://suryad6201:thisismongodbpassword@cluster0.go0zhfd.mongodb.net/budget-tracker?retryWrites=true&w=majority";
+    const URI = MONGO_URI;
     await mongoose.connect(URI);
     console.log("DB Connected Successfully...");
   } catch (error) {
