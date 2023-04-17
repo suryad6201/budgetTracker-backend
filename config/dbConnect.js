@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const dbConnect = async () => {
   const MONGO_URI = process.env.MONGO_URI;
   try {
-    const URI = MONGO_URI;
+    const URI = `${MONGO_URI}`;
     await mongoose.connect(URI);
     console.log("DB Connected Successfully...");
   } catch (error) {
