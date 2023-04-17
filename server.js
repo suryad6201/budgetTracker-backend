@@ -22,19 +22,13 @@ app.use(cors());
 
 //---  Users route  ---
 // app.use(path, Route)
-app.use("https://budget-tracker-backend.onrender.com/api/v1/users", usersRoute);
+app.use("/api/v1/users", usersRoute);
 
 //---  Accounts route ---
-app.use(
-  "https://budget-tracker-backend.onrender.com/api/v1/accounts",
-  accountsRoute
-);
+app.use("/api/v1/accounts", accountsRoute);
 
 //---  Transaction Route  ---
-app.use(
-  "https://budget-tracker-backend.onrender.com/api/v1/transactions",
-  transactionsRoute
-);
+app.use("/api/v1/transactions", transactionsRoute);
 
 //---------------------------------------
 // ERROR HANDLERS
