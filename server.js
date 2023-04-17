@@ -24,6 +24,7 @@ app.use(cors());
 
 //---  Users route  ---
 // app.use(path, Route)
+
 app.use(`${BASE_URL}/api/v1/users`, usersRoute);
 
 //---  Accounts route ---
