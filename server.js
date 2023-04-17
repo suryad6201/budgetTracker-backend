@@ -28,7 +28,7 @@ app.use(cors());
 app.use(`${BASE_URL}/api/v1/users`, usersRoute);
 
 //---  Accounts route ---
-app.use(`${BASE_URL}/api/v1/accounts`, accountsRoute);
+app.use(`https://budget-tracker-backend.onrender.com/api/v1/accounts`, accountsRoute);
 
 //---  Transaction Route  ---
 app.use("https://budget-tracker-backend.onrender.com/api/v1/transactions", transactionsRoute);
